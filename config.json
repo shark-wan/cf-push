@@ -1,13 +1,13 @@
 {
     "_comment": "Cloudflare IP 优选工具配置文件 - 请根据需求修改下方参数",
 
-    "USE_GLOBAL_MODE": true,
-    "_comment_USE_GLOBAL_MODE": "true=全局最优15个；false=每个国家最优1个",
+    "USE_GLOBAL_MODE": false,
+    "_comment_USE_GLOBAL_MODE": "false=每个国家最优N个",
 
-    "GLOBAL_TOP_N": 15,
+    "GLOBAL_TOP_N": 35,
     "_comment_GLOBAL_TOP_N": "全局模式下最终保留的节点数量",
 
-    "PER_COUNTRY_TOP_N": 1,
+    "PER_COUNTRY_TOP_N": 8,
     "_comment_PER_COUNTRY_TOP_N": "分国家模式下每个国家保留的节点数量",
 
     "BANDWIDTH_CANDIDATES": 90,
@@ -28,10 +28,10 @@
     "PROGRESS_PRINT_INTERVAL": 1,
     "_comment_PROGRESS_PRINT_INTERVAL": "进度打印刷新间隔（秒），避免频繁 I/O",
 
-    "FILTER_COUNTRIES_ENABLED": false,
+    "FILTER_COUNTRIES_ENABLED": true,
     "_comment_FILTER_COUNTRIES_ENABLED": "是否启用国家过滤（仅保留指定国家的节点）",
 
-    "ALLOWED_COUNTRIES": ["US"],
+    "ALLOWED_COUNTRIES": ["HK", "JP", "MY", "SG", "TW", "KR", "RS", "US", "AU", "GE", "FR", "UA"],
     "_comment_ALLOWED_COUNTRIES": "允许的国家代码列表（如 US, JP），仅在 FILTER_COUNTRIES_ENABLED=true 时生效",
 
     "ENABLE_WXPUSHER": false,
